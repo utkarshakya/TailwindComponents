@@ -20,8 +20,8 @@
 
 - You can also download a specific component in the zip form from below.
 
-    Navigation Bar --> [Download](./zDown/NavBar.zip)
+    Navigation Bar --> [Download the file](https://drive.google.com/uc?id=1c_61LeegAGd_dyFDezFbC7iMi7YxOELT&export=download)
 
 ---
 
-        Star Or Fork This Repository To Get Involved. Thanks For Paying Attention
+#### Star Or Fork This Repository To Get Involved. Thanks For Paying Attention
