@@ -1,4 +1,15 @@
-<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body>
+    <!-- 
     Make Sure To Paste This Inside You Body.
     
     Add The Following Tailwind Classes In Your Body:
@@ -7,155 +18,211 @@
     Also Include The nav.js Script At The End Of The Body To Make It Functional.
 -->
 
-<nav class="w-screen max-w-screen-2xl">
-    <!-- For Mobile Screen -->
-    <div class="flex flex-col md:hidden">
-        <!-- Navigation Bar -->
-        <div class="flex justify-between px-3 py-4">
-            <!-- Logo -->
-            <span id="logo">utkarshakya</span>
+    <nav class="w-screen max-w-screen-2xl">
+        <!-- For Mobile Screen -->
+        <div class="flex flex-col md:hidden">
+            <!-- Navigation Bar -->
+            <div class="flex justify-between px-3 py-4">
+                <!-- Logo -->
+                <span id="logo">utkarshakya</span>
 
-            <!-- Buttons -->
-            <div class="flex gap-5">
-                <!-- Toggle Theme -->
-                <div>
-                    <div id="mobileSun" class="invert cursor-pointer">
-                        <!-- <img src="./logo/sun.svg" alt="sun"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path
-                                d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                            <path
-                                d="M12 2C11.6227 2.33333 11.0945 3.2 12 4M12 20C12.3773 20.3333 12.9055 21.2 12 22M19.5 4.50271C18.9685 4.46982 17.9253 4.72293 18.0042 5.99847M5.49576 17.5C5.52865 18.0315 5.27555 19.0747 4 18.9958M5.00271 4.5C4.96979 5.03202 5.22315 6.0763 6.5 5.99729M18 17.5026C18.5315 17.4715 19.5747 17.7108 19.4958 18.9168M22 12C21.6667 11.6227 20.8 11.0945 20 12M4 11.5C3.66667 11.8773 2.8 12.4055 2 11.5"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
+                <!-- Buttons -->
+                <div class="flex gap-5">
+                    <!-- Toggle Theme -->
+                    <div>
+                        <div id="mobileSun" class="invert cursor-pointer">
+                            <!-- <img src="./logo/sun.svg" alt="sun"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path
+                                    d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path
+                                    d="M12 2C11.6227 2.33333 11.0945 3.2 12 4M12 20C12.3773 20.3333 12.9055 21.2 12 22M19.5 4.50271C18.9685 4.46982 17.9253 4.72293 18.0042 5.99847M5.49576 17.5C5.52865 18.0315 5.27555 19.0747 4 18.9958M5.00271 4.5C4.96979 5.03202 5.22315 6.0763 6.5 5.99729M18 17.5026C18.5315 17.4715 19.5747 17.7108 19.4958 18.9168M22 12C21.6667 11.6227 20.8 11.0945 20 12M4 11.5C3.66667 11.8773 2.8 12.4055 2 11.5"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div id="mobileMoon" class="hidden cursor-pointer">
+                            <!-- <img src="./logo/moon.svg" alt="moon"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path
+                                    d="M19.5483 18C20.7476 16.9645 21.5819 15.6272 22 14.1756C19.5473 14.4746 17.0369 13.3432 15.7234 11.1113C14.4099 8.87928 14.6664 6.1807 16.1567 4.2463C14.1701 3.75234 11.9929 3.98823 10.0779 5.07295C7.30713 6.64236 5.83056 9.56635 6.0155 12.5"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2 15.3739C3.13649 16.1865 4.59053 16.1865 5.72702 15.3739C6.41225 14.8754 7.31476 14.8754 7.99999 15.3739C9.13648 16.1865 10.6072 16.2049 11.727 15.3924M17 19.6352C15.8635 18.8226 14.4095 18.8226 13.273 19.6352C12.5877 20.1338 11.6685 20.1153 10.9833 19.6167C9.8468 18.8042 8.39277 18.8042 7.27299 19.6167C6.57104 20.1153 5.68524 20.1153 5 19.6167"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
                     </div>
-                    <div id="mobileMoon" class="hidden cursor-pointer">
-                        <!-- <img src="./logo/moon.svg" alt="moon"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path
-                                d="M19.5483 18C20.7476 16.9645 21.5819 15.6272 22 14.1756C19.5473 14.4746 17.0369 13.3432 15.7234 11.1113C14.4099 8.87928 14.6664 6.1807 16.1567 4.2463C14.1701 3.75234 11.9929 3.98823 10.0779 5.07295C7.30713 6.64236 5.83056 9.56635 6.0155 12.5"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M2 15.3739C3.13649 16.1865 4.59053 16.1865 5.72702 15.3739C6.41225 14.8754 7.31476 14.8754 7.99999 15.3739C9.13648 16.1865 10.6072 16.2049 11.727 15.3924M17 19.6352C15.8635 18.8226 14.4095 18.8226 13.273 19.6352C12.5877 20.1338 11.6685 20.1153 10.9833 19.6167C9.8468 18.8042 8.39277 18.8042 7.27299 19.6167C6.57104 20.1153 5.68524 20.1153 5 19.6167"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                </div>
 
-                <!-- Hamburger And Cross Button -->
-                <div>
-                    <div class="dark:invert" id="hamburger">
-                        <!-- <img src="./logo/hamburger.svg" alt="hamburger"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="hidden dark:invert" id="cross">
-                        <!-- <img src="./logo/cross.svg" alt="cross"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path d="M15 9L12 12M12 12L9 15M12 12L15 15M12 12L9 9" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47714 17.5228 1.99998 12 1.99998"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M2.5 8.49998C2.86239 7.67055 3.3189 6.89164 3.85601 6.17676M6.17681 3.85597C6.89168 3.31886 7.67058 2.86237 8.5 2.49998"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                    <!-- Hamburger And Cross Button -->
+                    <div>
+                        <div class="dark:invert" id="hamburger">
+                            <!-- <img src="./logo/hamburger.svg" alt="hamburger"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="hidden dark:invert" id="cross">
+                            <!-- <img src="./logo/cross.svg" alt="cross"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path d="M15 9L12 12M12 12L9 15M12 12L15 15M12 12L9 9" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47714 17.5228 1.99998 12 1.99998"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2.5 8.49998C2.86239 7.67055 3.3189 6.89164 3.85601 6.17676M6.17681 3.85597C6.89168 3.31886 7.67058 2.86237 8.5 2.49998"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Navlinks -->
-        <div class="hidden dark:bg-gray-900" id="mobileNavlinks">
-            <ul class="list-none px-8 py-3 text-sm flex flex-col gap-3">
-                <a href="">
-                    <li class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
-                        Home</li>
-                </a>
-                <a href="">
-                    <li class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
-                        About</li>
-                </a>
-                <a href="">
-                    <li class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
-                        Project</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-    <!-- For Large Screen -->
-    <div class="hidden md:block">
-        <!-- Navigation Bar -->
-        <div class="flex justify-between px-10 py-5">
-            <!-- Navlinks And Buttons -->
-            <div class="flex gap-8">
-                <!-- Navlinks -->
-                <ul class="flex gap-3 items-center">
+            <!-- Navlinks -->
+            <div class="hidden dark:bg-gray-900" id="mobileNavlinks">
+                <ul class="list-none px-8 py-3 text-sm flex flex-col gap-3">
                     <a href="">
-                        <li class="">Home</li>
+                        <li
+                            class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
+                            Home</li>
                     </a>
                     <a href="">
-                        <li class="">About</li>
+                        <li
+                            class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
+                            About</li>
                     </a>
                     <a href="">
-                        <li class="">Project</li>
+                        <li
+                            class="border text-center py-3 dark:bg-gray-950 bg-gray-100 hover:bg-transparent rounded-full">
+                            Project</li>
                     </a>
                 </ul>
+            </div>
+        </div>
 
-                <!-- Toggle Theme -->
-                <div>
-                    <div id="sun" class="invert cursor-pointer">
-                        <!-- <img src="./logo/sun.svg" alt="sun"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path
-                                d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                            <path
-                                d="M12 2C11.6227 2.33333 11.0945 3.2 12 4M12 20C12.3773 20.3333 12.9055 21.2 12 22M19.5 4.50271C18.9685 4.46982 17.9253 4.72293 18.0042 5.99847M5.49576 17.5C5.52865 18.0315 5.27555 19.0747 4 18.9958M5.00271 4.5C4.96979 5.03202 5.22315 6.0763 6.5 5.99729M18 17.5026C18.5315 17.4715 19.5747 17.7108 19.4958 18.9168M22 12C21.6667 11.6227 20.8 11.0945 20 12M4 11.5C3.66667 11.8773 2.8 12.4055 2 11.5"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <div id="moon" class="hidden cursor-pointer">
-                        <!-- <img src="./logo/moon.svg" alt="moon"> -->
-                        <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="#000000" fill="none">
-                            <path
-                                d="M19.5483 18C20.7476 16.9645 21.5819 15.6272 22 14.1756C19.5473 14.4746 17.0369 13.3432 15.7234 11.1113C14.4099 8.87928 14.6664 6.1807 16.1567 4.2463C14.1701 3.75234 11.9929 3.98823 10.0779 5.07295C7.30713 6.64236 5.83056 9.56635 6.0155 12.5"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M2 15.3739C3.13649 16.1865 4.59053 16.1865 5.72702 15.3739C6.41225 14.8754 7.31476 14.8754 7.99999 15.3739C9.13648 16.1865 10.6072 16.2049 11.727 15.3924M17 19.6352C15.8635 18.8226 14.4095 18.8226 13.273 19.6352C12.5877 20.1338 11.6685 20.1153 10.9833 19.6167C9.8468 18.8042 8.39277 18.8042 7.27299 19.6167C6.57104 20.1153 5.68524 20.1153 5 19.6167"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
+        <!-- For Large Screen -->
+        <div class="hidden md:block">
+            <!-- Navigation Bar -->
+            <div class="flex justify-between px-10 py-5">
+                <!-- Navlinks And Buttons -->
+                <div class="flex gap-8">
+                    <!-- Navlinks -->
+                    <ul class="flex gap-3 items-center">
+                        <a href="">
+                            <li class="">Home</li>
+                        </a>
+                        <a href="">
+                            <li class="">About</li>
+                        </a>
+                        <a href="">
+                            <li class="">Project</li>
+                        </a>
+                    </ul>
+
+                    <!-- Toggle Theme -->
+                    <div>
+                        <div id="sun" class="invert cursor-pointer">
+                            <!-- <img src="./logo/sun.svg" alt="sun"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path
+                                    d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path
+                                    d="M12 2C11.6227 2.33333 11.0945 3.2 12 4M12 20C12.3773 20.3333 12.9055 21.2 12 22M19.5 4.50271C18.9685 4.46982 17.9253 4.72293 18.0042 5.99847M5.49576 17.5C5.52865 18.0315 5.27555 19.0747 4 18.9958M5.00271 4.5C4.96979 5.03202 5.22315 6.0763 6.5 5.99729M18 17.5026C18.5315 17.4715 19.5747 17.7108 19.4958 18.9168M22 12C21.6667 11.6227 20.8 11.0945 20 12M4 11.5C3.66667 11.8773 2.8 12.4055 2 11.5"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div id="moon" class="hidden cursor-pointer">
+                            <!-- <img src="./logo/moon.svg" alt="moon"> -->
+                            <!-- Uncomment The Above Image And Remove The Below SVG If You Have Setup The Logo Folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path
+                                    d="M19.5483 18C20.7476 16.9645 21.5819 15.6272 22 14.1756C19.5473 14.4746 17.0369 13.3432 15.7234 11.1113C14.4099 8.87928 14.6664 6.1807 16.1567 4.2463C14.1701 3.75234 11.9929 3.98823 10.0779 5.07295C7.30713 6.64236 5.83056 9.56635 6.0155 12.5"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2 15.3739C3.13649 16.1865 4.59053 16.1865 5.72702 15.3739C6.41225 14.8754 7.31476 14.8754 7.99999 15.3739C9.13648 16.1865 10.6072 16.2049 11.727 15.3924M17 19.6352C15.8635 18.8226 14.4095 18.8226 13.273 19.6352C12.5877 20.1338 11.6685 20.1153 10.9833 19.6167C9.8468 18.8042 8.39277 18.8042 7.27299 19.6167C6.57104 20.1153 5.68524 20.1153 5 19.6167"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Logo -->
-            <span id="logo">utkarshakya</span>
+                <!-- Logo -->
+                <span id="logo">utkarshakya</span>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
+    <script>
+        // Mobile Nav Script
+        const hamburger = document.querySelector("#hamburger")
+        const cross = document.querySelector("#cross")
+        const mobileNavlinks = document.querySelector("#mobileNavlinks")
+
+        hamburger.addEventListener("click", () => {
+            mobileNavlinks.classList.toggle('hidden')
+            cross.classList.toggle('hidden')
+            hamburger.classList.toggle('hidden')
+        })
+
+        cross.addEventListener("click", () => {
+            mobileNavlinks.classList.toggle('hidden')
+            cross.classList.toggle('hidden')
+            hamburger.classList.toggle('hidden')
+        })
+
+        // Dark/Light Mode Toggle
+        const page = document.querySelector('html')
+        const sun = document.querySelector("#sun")
+        const moon = document.querySelector("#moon")
+        const mobileSun = document.querySelector("#mobileSun")
+        const mobileMoon = document.querySelector("#mobileMoon")
+
+        sun.addEventListener("click", () => {
+            page.classList.toggle("dark")
+            sun.classList.toggle("hidden")
+            moon.classList.toggle("hidden")
+        })
+
+        moon.addEventListener("click", () => {
+            page.classList.toggle("dark")
+            moon.classList.toggle('hidden')
+            sun.classList.toggle('hidden')
+        })
+
+        mobileSun.addEventListener("click", () => {
+            page.classList.toggle("dark")
+            mobileSun.classList.toggle("hidden")
+            mobileMoon.classList.toggle("hidden")
+        })
+
+        mobileMoon.addEventListener("click", () => {
+            page.classList.toggle("dark")
+            mobileMoon.classList.toggle('hidden')
+            mobileSun.classList.toggle('hidden')
+        })
+    </script>
+</body>
+
+</html>
